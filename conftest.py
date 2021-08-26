@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+
 def pytest_addoption(parser):
     parser.addoption('--browser_name',
                      action='store',
@@ -11,6 +12,7 @@ def pytest_addoption(parser):
                      action='store',
                      default=None,
                      help="Choose language: ru, en, ...")
+
 
 @pytest.fixture(scope="function")
 def browser(request):
